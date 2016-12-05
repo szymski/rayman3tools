@@ -1,11 +1,11 @@
 module app;
 
-import std.stdio;
+import std.stdio, std.traits;
 
 void main(string[] args)
 {
 	debug {
-		args ~= "exportallmaps"; 
+		args ~= "relocation"; 
 	}
 	
 	// Print usage instruction, if no parameter given
@@ -39,7 +39,7 @@ void function(string[])[string] handlers;
 */
 mixin template registerHandlers(string moduleName = __MODULE__) {
 	static this() {
-		static import std.traits;
+		import std.traits;
 		
 		mixin("import thisModule = " ~ moduleName ~ ";");
 		

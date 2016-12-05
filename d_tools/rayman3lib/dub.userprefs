@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="dub.json">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Default" PreferredExecutionTarget="cov" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="dub.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="source\handlers\relocation.d">
     <Files>
-      <File FileName="source\app.d" Line="7" Column="1" />
-      <File FileName="dub.json" Line="11" Column="3" />
+      <File FileName="source\app.d" Line="48" Column="30" />
+      <File FileName="source\handlers\relocation.d" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
