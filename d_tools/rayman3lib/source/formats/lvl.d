@@ -40,7 +40,8 @@ class LvlFormat {
 
 	private void relocate() {
 		uint entryCount = ptrData[0];
-		
+
+		// We start at index 1, because we want to skip entry count
 		for(int i = 1; i < entryCount * 2 + 1; i += 2) {
 			int levelId = ptrData[i];
 			int address = ptrData[i + 1];
@@ -49,6 +50,22 @@ class LvlFormat {
 				uint* rawAddress = cast(uint*)(lvlData.ptr + address);
 				*rawAddress += cast(uint)levelsById[levelId].lvlData.ptr;
 			}
+		}
+	}
+
+	void printRelocation() {
+		uint entryCount = ptrData[0];
+		
+		// We start at index 1, because we want to skip entry count
+		for(int i = 1; i < entryCount * 2 + 1; i += 2) {
+			int levelId = ptrData[i];
+			int address = ptrData[i + 1];
+
+			// TODO: Make level id settable
+			//if(levelId == 0) {
+				uint* rawAddress = cast(uint*)(lvlData.ptr + address);
+				writeln(address, " ", *rawAddress);
+			//}
 		}
 	}
 }
