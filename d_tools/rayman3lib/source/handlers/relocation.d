@@ -13,7 +13,7 @@ void relocation(string[] args) {
 	LvlFormat lvl = new LvlFormat(0, lvlFilename, ptrFilename);
 }
 
-@handler lvlrelocation(string args[]) {
+@handler lvlrelocation(string[] args) {
 	if(args.length < 2) {
 		writeln("Usage: lvlrelocation lvlfilename ptrfilename");
 		return;

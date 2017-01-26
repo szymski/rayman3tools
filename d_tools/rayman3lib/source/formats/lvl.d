@@ -18,6 +18,7 @@ class LvlFormat {
 
 	this(uint levelId, string lvlFilename, string ptrFilename) {
 		this.levelId = levelId;
+		loadedLevels ~= this;
 		levelsById[levelId] = this;
 
 		_lvlFilename = lvlFilename;
@@ -26,6 +27,7 @@ class LvlFormat {
 		name = baseName(lvlFilename);
 
 		readFiles();
+		relocate();
 	}
 
 	private void readFiles() {

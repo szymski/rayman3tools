@@ -5,7 +5,7 @@ import std.stdio, std.traits;
 void main(string[] args)
 {
 	debug {
-		args ~= "relocation"; 
+		args ~= "models"; 
 	}
 	
 	// Print usage instruction, if no parameter given
